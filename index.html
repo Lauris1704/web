@@ -1,126 +1,207 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CALCUNAUTAS</title>
-  <link rel="stylesheet" href="diseño_index.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+/* ------------------------- */
+/* RESET GENERAL */
+/* ------------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-</head>
-<body>
+body {
+  font-family: 'Comic Sans MS', cursive;
+  background-color: #fceefc;
+  color: #070707;
+  background-image: url("fondo1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+}
 
-  <nav class="menu">
-    <ul>
-      <li><a class="active" href="#inicio">Inicio</a></li>
-      <li><a href="#juegos">Juegos</a></li>
-      <li><a href="#tarjetas">Lo último</a></li>
-      <li><a href="#acerca">Acerca de</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-      <li><a class="active" href="#final">Ubicación</a></li>
-    </ul>
-  </nav>
+/* ------------------------- */
+/* MENÚ RESPONSIVE */
+/* ------------------------- */
+.menu {
+  background-color: white;
+  padding: 10px 0;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+}
 
-  <!-- SECCIÓN INICIO -->
-  <section class="hero" id="inicio">
-    <div class="contenido-hero">
-      <h1>Aprende jugando</h1>
-      <p>Explora el universo del conocimiento con videojuegos educativos para primaria.</p>
-      <a href="#juegos" class="boton">Explorar Juegos</a>
-    </div>
-  </section>
+.menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
 
-  <!-- SECCIÓN POR QUÉ VIDEOJUEGOS -->
-  <section id="importancia" class="card">
-    <h2>¿Por qué usar videojuegos?</h2>
-    <p>Los videojuegos educativos convierten el aprendizaje en una experiencia divertida. Motivan, refuerzan conocimientos y estimulan la mente de forma natural.</p>
-  </section>
+.menu li a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
 
-  <!-- SECCIÓN BENEFICIOS -->
-  <section id="beneficios" class="beneficios">
-    <h2>Beneficios</h2>
-    <div class="tarjetas">
-      <div class="tarjeta">🧠 Pensamiento lógico</div>
-      <div class="tarjeta">🎯 Concentración</div>
-      <div class="tarjeta">🚀 Curiosidad científica</div>
-      <div class="tarjeta">💡 Resolución de problemas</div>
-    </div>
-  </section>
+/* ------------------------- */
+/* HERO - RESPONSIVE */
+/* ------------------------- */
+.hero {
+  background-image: url('fondo3.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 40vh;   /* Flexible */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
 
-  <!-- SECCIÓN GALERÍA / JUEGOS -->
-  <section id="juegos">
-    <h2>Galería de aventuras</h2>
-    <section class="galeria-scroll">
-      <img src="Videojuegos1.png" alt="Juego 1" class="fade-img" />
-      <img src="Videojuegos3.jpeg" alt="Juego 2" class="fade-img" />
-      <img src="Videojuegos4.jpg" alt="Juego 3" class="fade-img" />
-      <img src="Videojuegos5.jpg" alt="Juego 3" class="fade-img" />
-      <img src="Videojuegos6.jpg" alt="Juego 3" class="fade-img" />
-      <img src="Videojuegos7.jpeg" alt="Juego 3" class="fade-img" />
-    </section>
-  </section>
+.contenido-hero {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 25px;
+  border-radius: 20px;
+  max-width: 95%;
+}
 
-  <!-- SECCIÓN TARJETAS -->
-  <section id="tarjetas" class="card">
-    <h2>LO ÚLTIMO</h2>
-    <p>Es uno de los mejores JRPG de una saga que tiene más de 20 juegos, y volverá después de ocho años con un remaster que lo hará todavía más accesible.</p>
-    <p>Tales of Berseria Remastered será el próximo juego de la saga Tales of relanzado por Bandai Namco</p>
-    <img src="tales.webp" alt="Juego 3" class="fade-img" />
-</section>
+/* ------------------------- */
+/* BOTÓN RESPONSIVE */
+/* ------------------------- */
+.boton {
+  display: inline-block;
+  margin-top: 15px;
+  background-color: #ff5c5c;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  font-size: 1.1rem;
+}
 
-  <!-- SECCIÓN ACERCA DE -->
-  <section id="acerca" class="card">
-    <h2>Acerca de calcunautas</h2>
-    <p>CALCUNAUTAS es un proyecto diseñado para fortalecer el aprendizaje matemático mediante videojuegos educativos interactivos.</p>
-    <img src="calcunauta.jpg" alt="Juego 3" class="fade-img" />
-</section>
+/* ------------------------- */
+/* TARJETAS / SECCIONES */
+/* ------------------------- */
+.card {
+  padding: 40px 20px;
+  background-color: white;
+  margin: 40px auto;
+  max-width: 900px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-  <!-- SCRIPT EFECTO FADE -->
-  <script>
-    const fadeImgs = document.querySelectorAll('.fade-img');
+/* ------------------------- */
+/* BENEFICIOS */
+/* ------------------------- */
+.beneficios .tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
 
-    function checkScroll() {
-      const trigger = window.innerHeight;
-      fadeImgs.forEach(img => {
-        const box = img.getBoundingClientRect();
-        if (box.top < trigger && box.bottom > 0) {
-          img.classList.remove('fade-out');
-        } else {
-          img.classList.add('fade-out');
-        }
-      });
-    }
+.tarjeta {
+  background-color: #f7eaf2d2;
+  color: #333;
+  padding: 20px 30px;
+  border-radius: 15px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  max-width: 260px;
+  flex: 1 1 200px;
+}
 
-    window.addEventListener('scroll', checkScroll);
-    window.addEventListener('load', checkScroll);
-  </script>
+/* ------------------------- */
+/* GALERÍA DE IMÁGENES */
+/* ------------------------- */
+.galeria-scroll {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
 
-  <!-- SECCIÓN CONTACTO -->
-  <section id="contacto" class="card">
-    <h2>Contáctanos</h2>
-    <p>¿Eres docente o padre de familia? ¡Hablemos!</p>
-    <p><strong>Email:</strong> contacto@calcunautas.com</p>
-    <p><strong>Linea telefonica:</strong>3028598356</p>
-    
-  </section>
+.fade-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 20px;
+  transition: transform 0.4s ease, opacity 0.8s ease;
+  opacity: 1;
+  transform: scale(0.9);
+}
 
+/* ------------------------- */
+/* UBICACIÓN - RESPONSIVE MAP */
+/* ------------------------- */
+.index iframe {
+  width: 100% !important;
+  height: 250px;
+  border: none;
+  margin-top: 15px;
+}
 
-  <section class="index" id="final">
-    <div class="contenido-index">
-      <h1>UBICACIÓN</h1>
-      <p>Este proyecto se establece en la Corporación Universitaria Minuto de Dios – Sede Soacha, institución donde se originó y ha sido desarrollado en el marco de la carrera de Ingeniería de Sistemas.</p>
-      
-      <iframe
-      src=" https://qgiscloud.com/lsarmient/Qgis_web/"
-      width="700"
-      height="300"
-   ></iframe>
-    </div>
-  </section>
+/* ------------------------- */
+/* FOOTER */
+/* ------------------------- */
+footer {
+  background-color: #ff5c5c;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
 
-  <footer>
-    <p>&copy; 2025 CALCUNAUTAS. Todos los derechos reservados.</p>
-  </footer>
+/* ------------------------- */
+/* MEDIA QUERIES */
+/* ------------------------- */
 
-</body>
-</html>
+/* Teléfonos */
+@media (max-width: 600px) {
+
+  .hero {
+    min-height: 250px;
+  }
+
+  .fade-img {
+    max-width: 90%;
+  }
+
+  .tarjeta {
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 900px) {
+  .hero {
+    min-height: 300px;
+  }
+
+  .fade-img {
+    max-width: 250px;
+  }
+}
+
+/* PC grande */
+@media (min-width: 901px) {
+  .hero {
+    min-height: 450px;
+  }
+}
