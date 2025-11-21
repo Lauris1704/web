@@ -6,7 +6,15 @@
   <title>CALCUNAUTAS</title>
   <link rel="stylesheet" href="diseño_index.css" />
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
-  
+
+  <style>
+    #mapa {
+      width: 100%;
+      height: 350px;
+      border-radius: 15px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
 
@@ -21,7 +29,7 @@
     </ul>
   </nav>
 
-  <!-- SECCIÓN INICIO -->
+  <!-- INICIO -->
   <section class="hero" id="inicio">
     <div class="contenido-hero">
       <h1>Aprende jugando</h1>
@@ -30,13 +38,13 @@
     </div>
   </section>
 
-  <!-- SECCIÓN POR QUÉ VIDEOJUEGOS -->
+  <!-- IMPORTANCIA -->
   <section id="importancia" class="card">
     <h2>¿Por qué usar videojuegos?</h2>
-    <p>Los videojuegos educativos convierten el aprendizaje en una experiencia divertida. Motivan, refuerzan conocimientos y estimulan la mente de forma natural.</p>
+    <p>Los videojuegos educativos convierten el aprendizaje en una experiencia divertida.</p>
   </section>
 
-  <!-- SECCIÓN BENEFICIOS -->
+  <!-- BENEFICIOS -->
   <section id="beneficios" class="beneficios">
     <h2>Beneficios</h2>
     <div class="tarjetas">
@@ -47,77 +55,94 @@
     </div>
   </section>
 
-  <!-- SECCIÓN GALERÍA / JUEGOS -->
+  <!-- GALERÍA DE JUEGOS -->
   <section id="juegos">
     <h2>Galería de aventuras</h2>
     <section class="galeria-scroll">
-      <img src="Videojuegos1.png" alt="Juego 1" class="fade-img" />
-      <img src="Videojuegos3.jpeg" alt="Juego 2" class="fade-img" />
-      <img src="Videojuegos4.jpg" alt="Juego 3" class="fade-img" />
-      <img src="Videojuegos5.jpg" alt="Juego 3" class="fade-img" />
-      <img src="Videojuegos6.jpg" alt="Juego 3" class="fade-img" />
-      <img src="Videojuegos7.jpeg" alt="Juego 3" class="fade-img" />
+      <img src="Videojuegos1.png" class="fade-img" />
+      <img src="Videojuegos3.jpeg" class="fade-img" />
+      <img src="Videojuegos4.jpg" class="fade-img" />
+      <img src="Videojuegos5.jpg" class="fade-img" />
+      <img src="Videojuegos6.jpg" class="fade-img" />
+      <img src="Videojuegos7.jpeg" class="fade-img" />
     </section>
   </section>
 
-  <!-- SECCIÓN TARJETAS -->
+  <!-- TARJETAS -->
   <section id="tarjetas" class="card">
     <h2>LO ÚLTIMO</h2>
-    <p>Es uno de los mejores JRPG de una saga que tiene más de 20 juegos, y volverá después de ocho años con un remaster que lo hará todavía más accesible.</p>
-    <p>Tales of Berseria Remastered será el próximo juego de la saga Tales of relanzado por Bandai Namco</p>
-    <img src="tales.webp" alt="Juego 3" class="fade-img" />
-</section>
-
-  <!-- SECCIÓN ACERCA DE -->
-  <section id="acerca" class="card">
-    <h2>Acerca de calcunautas</h2>
-    <p>CALCUNAUTAS es un proyecto diseñado para fortalecer el aprendizaje matemático mediante videojuegos educativos interactivos.</p>
-    <img src="calcunauta.jpg" alt="Juego 3" class="fade-img" />
-</section>
-
-  <!-- SCRIPT EFECTO FADE -->
-  <script>
-    const fadeImgs = document.querySelectorAll('.fade-img');
-
-    function checkScroll() {
-      const trigger = window.innerHeight;
-      fadeImgs.forEach(img => {
-        const box = img.getBoundingClientRect();
-        if (box.top < trigger && box.bottom > 0) {
-          img.classList.remove('fade-out');
-        } else {
-          img.classList.add('fade-out');
-        }
-      });
-    }
-
-    window.addEventListener('scroll', checkScroll);
-    window.addEventListener('load', checkScroll);
-  </script>
-
-  <!-- SECCIÓN CONTACTO -->
-  <section id="contacto" class="card">
-    <h2>Contáctanos</h2>
-    <p>¿Eres docente o padre de familia? ¡Hablemos!</p>
-    <p><strong>Email:</strong> contacto@calcunautas.com</p>
-    <p><strong>Linea telefonica:</strong>3028598356</p>
-    
+    <p>Tales of Berseria Remastered será el próximo juego de la saga Tales.</p>
+    <img src="tales.webp" class="fade-img" />
   </section>
 
+  <!-- ACERCA -->
+  <section id="acerca" class="card">
+    <h2>Acerca de Calcunautas</h2>
+    <p>Proyecto para fortalecer el aprendizaje matemático mediante videojuegos.</p>
+    <img src="calcunauta.jpg" class="fade-img" />
+  </section>
 
+  <!-- CONTACTO -->
+  <section id="contacto" class="card">
+    <h2>Contáctanos</h2>
+    <p><strong>Email:</strong> contacto@calcunautas.com</p>
+    <p><strong>Línea telefónica:</strong> 3028598356</p>
+  </section>
+
+  <!-- UBICACIÓN EN TIEMPO REAL -->
   <section class="index" id="final">
     <div class="contenido-index">
-      
-      <iframe
-      iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.097659100313!2d-74.22669062639287!3d4.576477895398134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f75640b9cf807%3A0x719f4ce02057aeff!2sUNIMINUTO%20Centro%20Regional%20Soacha!5e0!3m2!1ses!2sco!4v1763761118802!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </iframe>
-      
+      <h1>UBICACIÓN EN TIEMPO REAL</h1>
+      <p>Se mostrará tu ubicación actual en el mapa:</p>
+
+      <div id="mapa"></div>
     </div>
   </section>
 
   <footer>
     <p>&copy; 2025 CALCUNAUTAS. Todos los derechos reservados.</p>
   </footer>
+
+  <!-- GOOGLE MAPS + GEOLOCALIZACIÓN -->
+  <script>
+    let mapa, marcador;
+
+    function initMap() {
+      mapa = new google.maps.Map(document.getElementById("mapa"), {
+        zoom: 17,
+        center: { lat: 4.60971, lng: -74.08175 } // Centro temporal Bogotá
+      });
+
+      marcador = new google.maps.Marker({
+        map: mapa,
+        title: "Ubicación actual"
+      });
+
+      if (navigator.geolocation) {
+        navigator.geolocation.watchPosition(
+          function (pos) {
+            const lat = pos.coords.latitude;
+            const lng = pos.coords.longitude;
+
+            const nuevaPos = { lat, lng };
+
+            marcador.setPosition(nuevaPos);
+            mapa.setCenter(nuevaPos);
+          },
+          function (error) {
+            alert("No se pudo obtener la ubicación.");
+          },
+          { enableHighAccuracy: true }
+        );
+      } else {
+        alert("Tu navegador no admite geolocalización");
+      }
+    }
+  </script>
+
+  <script async 
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOP2SW7rJkj4lTkbSt_7c6Mu6x6oL-VJk&callback=initMap">
+  </script>
 
 </body>
 </html>
